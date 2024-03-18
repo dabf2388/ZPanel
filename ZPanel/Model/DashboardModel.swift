@@ -8,18 +8,17 @@
 import SwiftUI
 
 class HomeModel {
-    var id: Int = 0
-    var title: String = ""
-    var icon: String = ""
-    var expand: Bool = false
-    var size: Int = 0
+    var id: String = ""
+    var country: String = ""
+    var city: String = ""
+    var ip: String = ""
+    var cpuCount: Float = 0
+    var memoryCount: Float = 0
+    var diskCount: Float = 0
+    var upTime: String = ""
+    var sysVersion: String = ""
+    var sysName: String = ""
+    var kernelVersion: String = ""
     
-    init(id: Int, title: String, icon: String, expand: Bool, size: Int) {
-        self.id = id
-        self.title = title
-        self.icon = icon
-        self.expand = expand
-        self.size = size
-    }
 }
 

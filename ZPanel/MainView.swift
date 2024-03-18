@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State var currentTab = 0
+    @State var currentTab = 1
     
     init() {
         UITabBar.appearance().isHidden = true

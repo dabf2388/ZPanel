@@ -10,10 +10,15 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                vpsList()
-                    .padding(.top, 20)
-                Spacer()
+            
+            ZStack {
+                VStack {
+                    vpsList()
+                    Spacer()
+                }
+                .padding(.top, 20)
+                .navigationBarTitleDisplayMode(.inline)
+                    
                 
             }
             .toolbar {
@@ -41,16 +46,27 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationBarColor(Color("navigationBarBG"))
         }
     }
     
     @ViewBuilder
     func vpsList() -> some View {
-        
+        VStack(spacing: 16) {
+            HStack(spacing: 0) {
+                Text("监控")
+                    .font(.caption)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.body)
+            }
+            .padding(.horizontal, 20)
+            Divider()
+        }
+//        .background(Color.red)
+        .border(Color.black)
     }
 }
 
 #Preview {
-    HomeView()
+    MainView()
 }

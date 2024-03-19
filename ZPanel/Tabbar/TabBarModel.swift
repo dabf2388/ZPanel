@@ -8,9 +8,9 @@
 import SwiftUI
 
 let tabBarList: [TabBarModel] = [
-    TabBarModel(id: 1, title: "仪表盘", icon: "house.fill"),
-    TabBarModel(id: 2, title: "数据", icon: "hand.raised.fill"),
-    TabBarModel(id: 3, title: "设置", icon: "person.fill")
+    TabBarModel(id: 1, title: "仪表盘", icon: "light.panel.fill"),
+    TabBarModel(id: 2, title: "主机", icon: "externaldrive.connected.to.line.below.fill"),
+    TabBarModel(id: 3, title: "功能", icon: "lightbulb.2.fill")
 ]
 
 struct TabBarModel {

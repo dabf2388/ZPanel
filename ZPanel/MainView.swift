@@ -19,7 +19,7 @@ struct MainView: View {
         VStack(spacing: 0) {
             TabView(selection: $currentTab) {
                 HomeView().tag(1)
-                DetailView().tag(2)
+                ServerView().tag(2)
                 SettingView().tag(3)
             }
             TabBarView(currentTab: $currentTab)

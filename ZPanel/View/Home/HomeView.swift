@@ -34,6 +34,7 @@ struct HomeView: View {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
                         NavigationLink {
                             SettingView()
+                                .navigationBarHidden(true)
                         } label: {
                             Image("logo")
                                 .resizable()
@@ -146,6 +147,7 @@ struct HomeView: View {
                 .padding(.bottom, 16)
                 
             }
+            .foregroundStyle(Color.black)
             .background(Color(hue: 0.67, saturation: 0.00, brightness: 1.00, opacity: 1.00))
             .cornerRadius(8)
             .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
@@ -222,6 +224,7 @@ struct HomeView: View {
                 .padding(.vertical, 8)
                 .padding(.bottom, 16)
             }
+            .foregroundStyle(Color.black)
             .background(Color(hue: 0.67, saturation: 0.00, brightness: 1.00, opacity: 1.00))
             .cornerRadius(8)
             .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
@@ -346,6 +349,7 @@ struct HomeView: View {
                 .padding(.vertical, 8)
                 .padding(.bottom, 16)
             }
+            .foregroundStyle(Color.black)
             .background(Color(hue: 0.67, saturation: 0.00, brightness: 1.00, opacity: 1.00))
             .cornerRadius(8)
             .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)

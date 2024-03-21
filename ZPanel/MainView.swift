@@ -16,13 +16,16 @@ struct MainView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            TabView(selection: $currentTab) {
-                HomeView().tag(1)
-                ServerView().tag(2)
-                SettingView().tag(3)
+        NavigationStack {
+            
+            VStack(spacing: 0) {
+                TabView(selection: $currentTab) {
+                    HomeView().tag(1)
+                    ServerView().tag(2)
+                    SettingView().tag(3)
+                }
+                TabBarView(currentTab: $currentTab)
             }
-            TabBarView(currentTab: $currentTab)
         }
     }
 }

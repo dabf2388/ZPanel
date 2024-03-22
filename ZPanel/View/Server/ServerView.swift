@@ -17,7 +17,7 @@ struct ServerView: View {
                         vpsCellList()
                         Spacer()
                     }
-                    .padding(.top, 12)
+                    .padding(.top, 16)
                     .navigationBarTitleDisplayMode(.inline)
                     
                     
@@ -47,7 +47,6 @@ struct ServerView: View {
             VStack {
                 NavigationLink {
                     ServerDetailView()
-                        .navigationBarHidden(true)
                 } label: {
                     VStack(spacing: 8) {
                         Group {
@@ -64,7 +63,7 @@ struct ServerView: View {
                                     .fontWeight(.medium)
                                     .foregroundStyle(Color.green)
                             }
-                            .padding(.top, 16)
+                            .padding(.top, 20)
                             HStack {
                                 Text("CPU: 1核 - 内存: 2GB - 系统盘: 50GB")
                                     .font(.caption2)
@@ -80,7 +79,7 @@ struct ServerView: View {
                                     .font(.caption2)
                                 Spacer()
                             }
-                            .padding(.bottom, 16)
+                            .padding(.bottom, 20)
                         }
                         .padding(.horizontal, 16)
                     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack {
-            NavigationView {
+            NavigationStack {
                 
                 ZStack {
                     VStack {
@@ -34,7 +34,6 @@ struct HomeView: View {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
                         NavigationLink {
                             SettingView()
-                                .navigationBarHidden(true)
                         } label: {
                             Image("logo")
                                 .resizable()

@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ServerDetailView: View {
     
-    @State var currentItem: TopTab = .zjpz
+    @State var currentItem: TopTab = .baseinfo
     @Namespace var animationSpace
     
     enum TopTab: String, CaseIterable {
-        case zjpz = "主机配置"
-        case xtxx = "系统信息"
-        case wljk = "网络监控"
+        case baseinfo = "信息"
+        case xtxx = "进程"
+        case wljk = "日志"
 //        case jcjk = "进程监控"
-        case cpjk = "磁盘监控"
+        case cpjk = "功能"
 //        case dlrz = "登录日志"
         
     }
@@ -61,7 +61,7 @@ struct ServerDetailView: View {
             TabView(selection: $currentItem) {
                 ForEach(TopTab.allCases, id: \.rawValue) { item in
                     switch item {
-                        case .zjpz: zhujipeizhi().tag(item)
+                        case .baseinfo: zhujipeizhi().tag(item)
                         case .xtxx: xitongxinxi().tag(item)
                         case .wljk: wangluojiankong().tag(item)
 //                        case .jcjk: jinchengjiankong().tag(item)
@@ -79,10 +79,8 @@ struct ServerDetailView: View {
     @ViewBuilder
     func head()-> some View{
         HStack {
-            Image("sign")
-                .resizable()
-                .frame(width: 48, height: 42)
-                .offset(y: -2)
+            Image("chevron.backward")
+                .font(.system(size: 14))
             
             Spacer()
             
@@ -95,7 +93,7 @@ struct ServerDetailView: View {
             }
         }
         .overlay(content: {
-            HStack(spacing: 24) {
+            HStack(spacing: 0) {
                 ForEach(TopTab.allCases, id: \.rawValue) { item in
                     Button {
                         withAnimation {
@@ -105,7 +103,7 @@ struct ServerDetailView: View {
                         Text(item.rawValue)
                             .fontWeight(currentItem == item ? .medium : .regular)
                             .frame(width: 84)
-                            .foregroundColor(currentItem == item ? Color.blue: Color.red)
+                            .foregroundColor(currentItem == item ? Color.blue: Color.black)
                             .background {
                                 VStack{
                                     if(currentItem == item){
@@ -131,13 +129,35 @@ struct ServerDetailView: View {
             alignment: .bottom
         )
         .frame(maxWidth: .infinity)
-        .padding(.horizontal, 12)
         .background(Color("tabbarBG"))
     }
     
     @ViewBuilder
     func zhujipeizhi()-> some View {
-        Text("主机配置")
+        let items = [
+                ("主机名", "root@s19248"),
+                ("CPU", "1 核心"),
+                ("内存", "4 GB"),
+                // Add more items as needed
+            ]
+        List(items, id: \.0) { item in
+            
+            HStack {
+                    Text(item.0) // 左侧标题
+                        .font(.headline)
+                    Spacer()
+                    Text(item.1) // 右侧内容
+                }
+                .contextMenu {
+                    Button(action: {
+                        // 复制内容
+                        UIPasteboard.general.string = item.1
+                    }) {
+                        Text("Copy")
+                        Image(systemName: "doc.on.doc")
+                    }
+                }
+        }
     }
     
     @ViewBuilder

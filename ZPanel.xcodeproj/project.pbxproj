@@ -20,6 +20,7 @@
 		ADF0A8372BA82018007D3563 /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0A8362BA82018007D3563 /* ServerView.swift */; };
 		ADF0A8392BA82246007D3563 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0A8382BA82246007D3563 /* NavigationBar.swift */; };
 		ADF0A83C2BA82AD1007D3563 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0A83B2BA82AD1007D3563 /* DashboardModel.swift */; };
+		ADF0A8422BB2ABD7007D3563 /* ServerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0A8412BB2ABD7007D3563 /* ServerDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		ADF0A8362BA82018007D3563 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
 		ADF0A8382BA82246007D3563 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		ADF0A83B2BA82AD1007D3563 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
+		ADF0A8412BB2ABD7007D3563 /* ServerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF0A83B2BA82AD1007D3563 /* DashboardModel.swift */,
+				ADF0A8412BB2ABD7007D3563 /* ServerDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF0A83C2BA82AD1007D3563 /* DashboardModel.swift in Sources */,
+				ADF0A8422BB2ABD7007D3563 /* ServerDetailModel.swift in Sources */,
 				ADF0A81A2BA81C61007D3563 /* ContentView.swift in Sources */,
 				ADF0A8372BA82018007D3563 /* ServerView.swift in Sources */,
 				ADF0A82A2BA81D01007D3563 /* HomeView.swift in Sources */,
@@ -371,7 +375,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -410,7 +414,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
